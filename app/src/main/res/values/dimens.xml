@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_banner">45dp</dimen>
+    <dimen name="module_height">90dp</dimen>
+    <dimen name="txt_title">16dp</dimen>
+    <dimen name="txt_banner">15dp</dimen>
+    <dimen name="txt_hint">13dp</dimen>
+    <dimen name="txt_normal">12dp</dimen>
+    <dimen name="line_split">8dp</dimen>
+    <dimen name="line_thin">2dp</dimen>
+    <dimen name="line_one">1dp</dimen>
+    <dimen name="dimen_ten">10dp</dimen>
+    <dimen name="dimen_six">6dp</dimen>
+    <dimen name="dimen_sixteen">16dp</dimen>
+    <dimen name="dimen_fifteen">15dp</dimen>
+    <dimen name="dimen_twenty">20dp</dimen>
+    <dimen name="dimen_image">27dp</dimen>
+    <dimen name="layout_padding">10dp</dimen>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 边框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="@color/blue" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="1dp"
+        android:left="0dp"
+        android:right="1dp"
+        android:top="0dp">
+        <shape>
+            <!--这个是背景颜色-->
+            <solid android:color="@color/white" />
+            <!--这个是按钮中的字体与按钮内的四周边距-->
+            <padding
+                android:bottom="10dp"
+                android:left="10dp"
+                android:right="10dp"
+                android:top="10dp" />
+        </shape>
+    </item>
+
+</layer-list>

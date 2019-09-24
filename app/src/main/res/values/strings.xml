@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">闪击</string>
+    <string name="stock_search" translatable="false">核查导出</string>
+    <string name="stock_search_hint" translatable="false">库存查询</string>
+    <string name="stock_in" translatable="false">录入</string>
+    <string name="stock_in_hint" translatable="false">盘点/记录库存</string>
+    <string name="stock_statistic" translatable="false">库存统计</string>
+    <string name="stock_statistic_hint" translatable="false">统计图展示</string>
+    <string name="stock_upload" translatable="false">图标上传</string>
+    <string name="stock_upload_hint" translatable="false">商标图标上传</string>
+</resources>

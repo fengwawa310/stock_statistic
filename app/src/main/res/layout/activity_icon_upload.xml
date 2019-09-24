@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/info_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@color/mainBg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/iv_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图标上传"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_title"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_fifteen"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="品  牌 :" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <sky.it.com.stock_statistics.customview.ClearEditText
+                    android:id="@+id/et_stock_icon"
+                    android:layout_toStartOf="@+id/iv_record_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/iv_search"
+                    android:background="@drawable/selector_bg"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/iv_record_icon"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/iv_record_unuse"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="图  标 :" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_pic"
+                android:layout_marginLeft="8dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+
+                <RelativeLayout
+                    android:background="@drawable/selector_bg"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic_default"
+                        android:layout_marginTop="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/iv_pic"
+                        android:scaleType="fitXY"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp" />
+
+                    <TextView
+                        android:layout_below="@+id/iv_pic_default"
+                        android:layout_marginTop="5dp"
+                        android:text="点击上传图标"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12dp"
+                        android:textColor="@color/mainBg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:background="@drawable/btn_save"
+            android:layout_margin="15dp"
+            android:text="确     定"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/wel_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_banner"
+        android:background="@color/mainBg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:src="@mipmap/iv_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:text="库存统计"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_title"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bar_chart"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+</LinearLayout>

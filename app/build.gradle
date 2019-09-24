@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "sky.it.com.stock_statistics"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+//            混淆打开
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '26.0.1'
+                }
+            }
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                // 此处指定生成的apk文件名
+                outputFileName = "stock.apk"
+            }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:24.2.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+    // https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-android
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    // https://mvnrepository.com/artifact/com.j256.ormlite/ormlite-core
+    implementation 'com.j256.ormlite:ormlite-core:4.48'
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.liyi:sutils:2.0.3'
+    implementation project(':core')
+    implementation project(':pullToRefreshLib')
+    implementation files('src/lib/jxl-2.6.12.jar')
+    implementation files('src/lib/MPAndroidChart-v3.0.3.jar')
+    implementation project(':popWindow_library')
+    // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
+    implementation group: 'com.github.bumptech.glide', name: 'glide', version: '4.8.0'
+    // https://mvnrepository.com/artifact/com.squareup.picasso/picasso
+    implementation group: 'com.squareup.picasso', name: 'picasso', version: '2.5.2'
+
+    //指定版本
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+    //    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
+    //    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    //    implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '3.17'
+    implementation files('src/lib/poi-3.12-android-a.jar')
+    implementation files('src/lib/poi-ooxml-schemas-3.12-20150511-a.jar')
+    implementation 'org.apache.httpcomponents:httpclient:4.2.1'
+}

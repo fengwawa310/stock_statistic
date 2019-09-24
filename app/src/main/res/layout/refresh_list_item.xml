@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+
+        <TextView
+            android:id="@+id/txt_number"
+            android:text="编号"
+            android:gravity="center"
+            android:background="@drawable/edge_right_bottom"
+            android:layout_width="50dp"
+            android:lineSpacingMultiplier="0.8"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_stockNum"
+            android:text="名称"
+            android:background="@drawable/edge_right_bottom"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_total"
+            android:text="规格"
+            android:background="@drawable/edge_right_bottom"
+            android:gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_type"
+            android:text="款型"
+            android:background="@drawable/edge_right_bottom"
+            android:gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_unit"
+            android:text="单位"
+            android:background="@drawable/edge_right_bottom"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_amount"
+            android:text="数量"
+            android:background="@drawable/edge_right_bottom"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_left"
+            android:text="备注"
+            android:background="@drawable/edge_bottom"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
